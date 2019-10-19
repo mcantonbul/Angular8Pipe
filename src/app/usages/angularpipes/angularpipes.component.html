@@ -1,0 +1,126 @@
+<div class="pipeContainer">
+  <label style="font-weight: bold"> LowerCasePipe</label>
+  <hr>
+  {{ 'KÜÇÜK' | lowercase}}
+  <br>
+        <br>
+  <input type="text" [(ngModel)]="lowerCaseValue" placeholder="Küçük Harf Pipe">
+  <br>
+        <br>
+  {{ lowerCaseValue | lowercase}}
+</div>
+
+<div class="pipeContainer">
+  <label style="font-weight: bold"> UpperCasePipe</label>
+  <hr>
+  {{ 'büyük' | uppercase}}
+  <br>
+  <br>
+  <input type="text" [(ngModel)]="upperCaseValue" placeholder="Büyük Harf Pipe">
+  <br>
+  <br>
+  {{ upperCaseValue | uppercase}}
+  <br>
+</div>
+
+<div class="pipeContainer">
+        <label style="font-weight: bold"> JsonPipe</label>
+        <br>
+        <br>
+        <label>Orijinal Ekran Çıktısı:</label>
+        <br>
+        <br>
+        {{ myObject }}
+        <br>
+        <br>
+        <label>Pipe'lı Ekran Çıktısı</label>
+        <br>
+        <br>
+        {{ myObject | json}}
+        <br>
+</div>
+
+<div class="pipeContainer">
+        <label style="font-weight: bold"> TitleCasePipe</label>
+        <hr>
+        {{ 'title case' | titlecase}}
+        <br>
+        <br>
+        <input type="text" [(ngModel)]="titleCaseValue" placeholder="Başlık Pipe">
+        <br>
+        <br>
+        {{ titleCaseValue | titlecase}}
+        <br>
+</div>
+
+<div class="pipeContainer">
+        <label style="font-weight: bold"> SlicePipe</label>
+        <hr>
+        {{ 'deneme' | slice:2:6}}
+        <br>
+        <br>
+        <label>(Kelimenin 2. ile 6.harfleri arasını keser)</label>
+        <br>
+        <br>
+        <input type="text" [(ngModel)]="sliceValue" placeholder="Kesme Pipe">
+        <br>
+        <br>
+        {{ sliceValue | slice:2:6}}
+        <br>
+</div>
+
+<div class="pipeContainer">
+        <label style="font-weight: bold"> PercentPipe</label>
+        <hr>
+        {{ '0.45' | percent}}
+        <br>
+        <br>
+        <input type="text" [(ngModel)]="percentValue" placeholder="Yüzde Pipe">
+       
+        <br>
+        <br>
+        <label> Percent Varsayılan</label>
+        <br>
+        <br>
+        {{ percentValue | percent}}
+        <br>
+        <br>
+        <label> Percent Digits Ayarlarıyla : '2.1-2'</label>
+        <br>
+        <br>
+        {{ percentValue | percent:'2.1-2'}}
+</div>
+
+
+<div class="pipeContainer">
+        <label style="font-weight: bold"> DatePipe</label>
+        <hr>
+        <label> DatePipe Varsayılan</label>
+        <br>
+        <br>
+        {{ bugun | date}}
+        <br>
+        <br>
+        <label> DatePipe Saat ve Dakika</label>
+        <br>
+        <br>
+        {{ bugun | date:'hh:mm'}}
+        <br>
+        <br>
+        <label> DatePipe Gün, Ay ve Yıl</label>
+        <br>
+        <br>
+        {{ bugun | date:'d.M.y'}}
+        <br>
+        <br>
+        <label>DatePipe Türkçe Gün</label>
+        <br>
+        <br>
+        {{ bugun | date:'EEEE':null:'tr'}}
+        <br>
+        <br>
+        <label>DatePipe Varsayılan Gün</label>
+        <br>
+        <br>
+        {{ bugun | date:'EEEE'}}
+</div>
