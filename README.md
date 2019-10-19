@@ -1,3 +1,8 @@
+
+# Angular8 Pipe Kullanımı
+
+Proje ana dosyasında `npm install`, ardından `ng serve` ile projeyi çalıştırabilirsiniz.
+
 # Angular8Pipe
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
